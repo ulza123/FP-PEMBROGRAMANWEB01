@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Bootstrap</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<style>
+		body {background: #eee}
+		.container {background: #fff;}
+		a.sliderImage {margin: 0 25px 0 25px;text-align: center;display: block;}
+		a.pname {margin: 25px;text-align: center;display: block;}		
+		#slider {height:250px;}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="row-fluid">
+
+			<div id="slider" class="span12 carousel slide">
+				
+				<h3>Featured Products<h4>
+				
+				<ol class="carousel-indicators">
+					<li data-target="#slider" data-slide-to="0" class="active"></li>
+					<li data-target="#slider" data-slide-to="1"></li>
+				</ol>					
+				<ul class="carousel-inner">
+					<div class="row active item">
+						<li data-target="#slider" class="span3" align="center">
+							<a href="#" class="sliderImage"><img src="http://placehold.it/150x150"></a></a>
+							<a href="#" class="pname">This is a product name</a>
+						</li>
+						<li data-target="#slider" class="span3" align="center">
+							<a href="#" class="sliderImage"><img src="http://placehold.it/150x150"></a></a>
+							<a href="#" class="pname">This is a product name</a>
+						</li>
+						<li data-target="#slider" class="span3" align="center">
+							<a href="#" class="sliderImage"><img src="http://placehold.it/150x150"></a></a>
+							<a href="#" class="pname">This is a product name</a>
+						</li>
+						<li data-target="#slider" class="span3" align="center">
+							<a href="#" class="sliderImage"><img src="http://placehold.it/150x150"></a></a>
+							<a href="#" class="pname">This is a product name</a>
+						</li>							
+					</div>
+					<div class="row item">
+						<li data-target="#slider" class="span3" align="center">
+							<a href="#" class="sliderImage"><img src="http://placehold.it/150x150"></a></a>
+							<a href="#" class="pname">This is a product name</a>
+						</li>
+						<li data-target="#slider" class="span3" align="center">
+							<a href="#" class="sliderImage"><img src="http://placehold.it/150x150"></a></a>
+							<a href="#" class="pname">This is a product name</a>
+						</li>
+					</div>
+				</ul>
+				<!-- Carousel nav -->
+				<a class="carousel-control left" href="#slider" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#slider" data-slide="next">&rsaquo;</a>					
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			$('#slider').carousel()
+		});
+	</script>
+
+</body>
+</html>
