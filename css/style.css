@@ -1,0 +1,26 @@
+.dgrgradient{
+	background: linear-gradient(to right,#7A1E51,#F84A55)
+}
+body {
+	background: #F6F8FA;
+}
+
+.circle {
+	display: inline-block;
+	font-size: 40px;
+}
+
+.trilez-navbar {
+	background: black;
+}
+
+.copy {
+	background: #363D42;
+	display: flex;
+	border-bottom: 5px solid #FD4C55;
+
+}
+
+.art {
+	overflow: hidden;
+}
