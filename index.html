@@ -12,10 +12,15 @@
     <link rel="stylesheet" href="css/style.css">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
+
 
     <title>Trilez Website</title>
   </head>
   <body>
+
+  	<!--header-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Trilez</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,9 +29,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-      </li>
+ 
       <li class="nav-item">
         <a class="nav-link" href="#"></a>
       </li>
@@ -56,32 +59,58 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#"></a>
       </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0 mr-0">
+    
+    <div ng-app="myapp" ng-controller="usercontroller">
     	<div class="input-group">
-    	<input class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;">
-      <div class="input-group-prepend">
+		<input name="search" id="search" ng-model="search" ng-keyup="complete(search)" class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;"><div class="input-group-prepend">
         <span class="input-group-text btn btn-outline-secondary"><i class="fas fa-search"></i></span>
       </div>
+    	<ul class="list-group daftarsearch" ng-model="hidethis" ng-hide="hidethis">
+    		<li class="list-group-item" ng-repeat="searchdata in filtersearch" ng-click="fillTextbox(searchdata)">{{searchdata}}</li>
+    	</ul>
+      
+	</div>
+    	
      
     </div>
       
     </form>
-    <div class="navbar-nav" >
-    	<div class="nav-item">
-    		<a href="#" class="nav-link">Trilez for Business</a>
-    	</div>
-    	<div class="nav-item">
-    		<a href="#" class="nav-link">Trilez for Education</a>
-    	</div>
-    </div>
+    <ul class="navbar-nav narbar-right ml-3">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Get your team access to Udemy’s top 2,500 courses anytime, anywhere.</p>
+          <a class="dropdown-item parlink ali" href="#">Try Trilez for Business</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Turn what you know into an opportunity and reach millions around the world.</p>
+          <a class="dropdown-item parlink ali" href="#">Learn More</a>
+        </div>
+      </li>
+
+    </ul>
     <div class="ml-0 mr-1">
-    <button class="btn btn-warning"><span class="fas fa-cart-plus"></span></button>
+    <button class="btn btn-warning" onclick="increaseNumber()"><span class="fas fa-cart-plus"></span><span class=" badge badge-pill badge-dark" id="cartcount"></span></button>
     <button class="btn btn-outline-light my-2 my-sm-2" type="submit">Login</button>
     <button class="btn btn-danger my-2 my-sm-2" type="submit">SignUp</button>
   	</div>
   </div>
 </nav>
+
+<!--end navbare-->
+
+
+
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -132,321 +161,59 @@
 		
 	</div>
 
-		<div class="container-fluid">
+		<div class="container">
 			<h2>Because you viewed a"Learn to code with HTML - Beginner to Expert"</h2>
-			<div class="card-group">
+			<div class="card-group d-flex flex-row justify-content-between">
 			
-			<div class="card mb-3" style="min-width: 14rem; height: 300px;">
+			<div class="card pop cardwid " style="min-width:12rem;width:12rem; height: 290px; max-width: 10rem;" data-container="body" data-toggle="popover" data-placement="right" data-content="<p class=&quot;popquote&quot;>HTML and CSS for Beginners course will give your all the knowledge you need to master HTML and CSS easily and quickly.</p><p>Instructor: Ewin Diaz </p> <a class=&quot; butquote btn btn-danger &quot; onclick=&quot;increaseNumber()&quot;>Enroll Now</a>" data-original-title="" title="<h6><a href=&quot;#&quot;>HTML and CSS for Beginners - Build a Website & Launch ONLINE</a></h6>">
 		  	<img class="card-img-top" src="img/htmlncss.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title ">HTML and CSS for Beginners</h5>
-		    <p class="card-text">Edwin Diaz, Coding Faculty</p>
-		    <h6 class="mb-0">Free</h6>
+		  	<div class="card-body d-flex flex-column justify-content-between">
+		    <h6 class="card-title "><a href="#" class="card-text">HTML and CSS for Beginners</a></h6>
+		    <p class="dtext">Edwin Diaz, Coding Faculty solution</p>
+		    <h8 class="">Free</h8>
 		  	</div>
 			</div>
 			
-			
-			<div class="card ml-3 mb-3" style="min-width: 14rem; height: 300px;">
-		  	<img class="card-img-top" src="img/css3.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Learn to Code with HTML-Beginner to ...</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6 class="mb-0">$19.99</h6>
+			<div class="card pop cardwid " style="min-width:12rem;width:12rem; height: 290px; max-width: 10rem;" data-container="body" data-toggle="popover" data-placement="right" data-content="<p class=&quot;popquote&quot;>Learn and Understand HTML & HTML5 From a total Beginner to and Expert HTML Web Developer</p><p>Instructor: Hussam Alkindi </p> <a class=&quot; butquote btn btn-danger &quot; onclick=&quot;increaseNumber()&quot;>Enroll Now</a>" data-original-title="" title="<h6><a href=&quot;#&quot;>Learn to code with HTML - Beginner to Expert</a></h6>">
+		  	<img class="card-img-top" src="img/html5.jpg" alt="Card image cap">
+		  	<div class="card-body d-flex flex-column justify-content-between">
+		    <h6 class="card-title "><a href="#" class="card-text">Learn to code with HTML- Beginner to Expert</a></h6>
+		    <p class="dtext">Hussam Alkindi</p>
+		    <h8 class=""><span style="text-decoration: line-through;">$200</span> &nbsp;$9.99</h8>
 		  	</div>
 			</div>
-			
 
-			
-			<div class="card ml-3  mb-3" style="min-width: 14rem; height: 300px;">
+			<div class="card pop cardwid " style="min-width:12rem;width:12rem; height: 290px; max-width: 10rem;" data-container="body" data-toggle="popover" data-placement="right" data-content="<p class=&quot;popquote&quot;>The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much</p><p>Instructor: Jonas Schmedtmann </p> <a class=&quot; butquote btn btn-danger &quot; onclick=&quot;increaseNumber()&quot;>Enroll Now</a>" data-original-title="" title="<h6><a href=&quot;#&quot;>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a></h6>">
 		  	<img class="card-img-top" src="img/designweb.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Advanced CSS and Sass</h5>
-		    <p class="card-text">Jonas Schmedtmann</p>
-		    <h6>$9.99</h6>
+		  	<div class="card-body d-flex flex-column justify-content-between">
+		    <h6 class="card-title"><a href="#" class="card-text">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a></h6>
+		    <p class="dtext">Jonas Schmedtmann</p>
+		    <h8 class=""><span style="text-decoration: line-through;">$199.9</span> &nbsp;$10.99</h8>
 		  	</div>
 			</div>
 
 			
-			
-			<div class="card ml-3 mb-3" style="min-width: 14rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Web Design for Beginners Real World..</h5>
-		    <p class="card-text">Brad Schiff</p>
-		    <h6>9.99</h6>
+
+			<div class="card pop cardwid " style="min-width:12rem;width:12rem; height: 290px; max-width: 10rem;" data-container="body" data-toggle="popover" data-placement="right" data-content="<p class=&quot;popquote&quot;>The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much</p><p>Instructor: Jonas Schmedtmann </p> <a class=&quot; butquote btn btn-danger &quot; onclick=&quot;increaseNumber()&quot;>Enroll Now</a>" data-original-title="" title="<h6><a href=&quot;#&quot;>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a></h6>">
+		  	<img class="card-img-top" src="img/designweb.jpg" alt="Card image cap">
+		  	<div class="card-body d-flex flex-column justify-content-between">
+		    <h6 class="card-title"><a href="#" class="card-text">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a></h6>
+		    <p class="dtext">Jonas Schmedtmann</p>
+		    <h8 class=""><span style="text-decoration: line-through;">$199.9</span> &nbsp;$10.99</h8>
 		  	</div>
 			</div>
-
-
-
-			<div class="card ml-3 mb-3" style="min-width: 14rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Step-by-step HTML and CSS for Absolute...</h5>
-		    <p class="card-text">Kathleen Farley</p>
-		    <h6>$9.99</h6>
-		  	</div>
-			</div>
-
 			
+			
+	
 
 		</div>
 		</div>
 		<!-- End of Grid menu 1-->
 
 
-		<div class="container-fluid">
-			<h2>Top Courses in "Business"</h2>
-			<div class="card-group">
-			
-			<div class="card mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/htmlncss.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">An Entire MBA in 1 Course..</h5>
-		    <p class="card-text">Chris Haroun, Complete bus..</p>
-		    <h6>$9.99</h6>
-		  	</div>
-			</div>
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/css3.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Business Analyst: Essential Mod..</h5>
-		    <p class="card-text">The BA Guide | Jeremy Aschen..</p>
-		    <h6>$9.99</h6>
-		  	</div>
-			</div>
-			
-
-			
-			<div class="card ml-3  mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/designweb.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Forex Roborts: Expect To Earn..</h5>
-		    <p class="card-text">Kirill Eremenko, ForexBoat..</p>
-		    <h6>$9.99</h6>
-		  	</div>
-			</div>
-
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">CAPM Exam Prep Seminar..</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-
-
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-
-		</div>
-		</div>
-		<!-- End of Grid menu 2-->
-
 		
-		<div class="container-fluid">
-			<h2>Because you viewed a"Learn to code with HTML - Beginner to Expert"</h2>
-			<div class="card-group">
-			
-			<div class="card mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/htmlncss.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">HTML and CSS for Beginners</h5>
-		    <p class="card-text">Edwin Diaz, Coding Faculty</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/css3.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-			
 
-			
-			<div class="card ml-3  mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/designweb.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-
-
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-
-		</div>
-		</div>
-		<!-- End of Grid menu 3-->
-
-
-		<div class="container-fluid">
-			<h2>Because you viewed a"Learn to code with HTML - Beginner to Expert"</h2>
-			<div class="card-group">
-			
-			<div class="card mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/htmlncss.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">HTML and CSS for Beginners</h5>
-		    <p class="card-text">Edwin Diaz, Coding Faculty</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/css3.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-			
-
-			
-			<div class="card ml-3  mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/designweb.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-
-
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-
-		</div>
-		</div>
-		<!-- End of Grid menu 4-->
-
-
-		<div class="container-fluid">
-			<h2>Because you viewed a"Learn to code with HTML - Beginner to Expert"</h2>
-			<div class="card-group">
-			
-			<div class="card mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/htmlncss.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">HTML and CSS for Beginners</h5>
-		    <p class="card-text">Edwin Diaz, Coding Faculty</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/css3.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-			
-
-			
-			<div class="card ml-3  mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/designweb.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-			
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-
-
-			<div class="card ml-3 mb-3" style="min-width: 15rem; height: 300px;">
-		  	<img class="card-img-top" src="img/webdesign.jpg" alt="Card image cap">
-		  	<div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Hussam AL-Ghamdi</p>
-		    <h6>Free</h6>
-		  	</div>
-			</div>
-
-			
-
-		</div>
-		</div>
-		<!-- End of Grid menu 5-->
-
-
+		<!--footer-->
 		<div class="copy p-4 bg-light">
 	<div class="container-fluid">
 		<div class="row  d-flex align-items-center justify-content-center">
@@ -472,6 +239,10 @@
 		<!--End of Navbar-->
 
 
+<div class="btn btn-danger pop" data-container="body" data-toggle="popover" data-placement="right" data-content="Optional parameter: Skip if this was not requested<br>  A placement group is a logical grouping of instances within a single Availability Zone. Using placement groups enables applications to get the full-bisection bandwidth and low-latency network performance required for tightly coupled, node-to-node communication typical of HPC applications.<br>This only applies to cluster compute instances: cc2.8xlarge, cg1.4xlarge, cr1.8xlarge, hi1.4xlarge and hs1.8xlarge.<br>    More info: <a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html&quot; target=&quot;_blank&quot;>Click here...</a> <a class=&quot; btn btn-danger &quot;>Click here</a>" data-original-title="" title="Ini Adalah Popover">
+    HOVER OVER ME
+    </div>
+
 
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -479,6 +250,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="js/myscript.js"></script>
+    <!--Angular-->
+    
 
   </body>
 </html>

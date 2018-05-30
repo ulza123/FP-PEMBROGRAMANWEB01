@@ -2,7 +2,7 @@
 	background: linear-gradient(to right,#7A1E51,#F84A55)
 }
 body {
-	background: #F6F8FA;
+	background: #eaeaea;
 }
 
 .circle {
@@ -23,4 +23,49 @@ body {
 
 .art {
 	overflow: hidden;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.parlink {
+min-width: 300px;
+padding: 16px;
+text-align: center;
+
+}
+.ali{
+	color: #0097D5;
+}
+
+.daftarsearch {
+	position: absolute;
+	z-index: 99999;
+	top: 40px;
+}
+.popquote {
+	
+	text-align: justify;
+}
+.butquote{
+	width: 100%;
+}
+
+.cardwid {
+	min-width: 200px;
+	width: 200px;
+	height: 300px;
+	position: relative;
+}
+.cardwid:hover img {
+	background: rgba(12,23,255,0.3);
+	opacity: 0.5;
+
+}
+
+.cardimg {
+	
+}
+.dtext{
+	font-size: 12px;
 }
