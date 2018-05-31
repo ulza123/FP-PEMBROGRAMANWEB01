@@ -35,41 +35,92 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Trillez</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!--header-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Trilez</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="far fa-list-alt"></i> &nbsp;Categories
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#"></a>
-        </li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+ 
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-buromobelexperte"></i> &nbsp;Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Development</a>
+          <a class="dropdown-item" href="#">Business</a>
+          <a class="dropdown-item" href="#">Office Productivity</a>
+          <a class="dropdown-item" href="#">Personal Development</a>
+          <a class="dropdown-item" href="#">Design</a>
+          <a class="dropdown-item" href="#">Marketing</a>
+          <a class="dropdown-item" href="#">LifeStyle</a>
+          <a class="dropdown-item" href="#">Photography</a>
+          <a class="dropdown-item" href="#">Health & Fitness</a>
+          <a class="dropdown-item" href="#">Teacher Training</a>
+          <a class="dropdown-item" href="#">Music</a>
+          <a class="dropdown-item" href="#">Academics</a>
+          <a class="dropdown-item" href="#">Languange</a>
+          <a class="dropdown-item" href="#">Test Prep</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0 mr-0">
+    
+    <div ng-app="myapp" ng-controller="usercontroller">
+      <div class="input-group">
+    <input name="search" id="search" ng-model="search" ng-keyup="complete(search)" class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;"><div class="input-group-prepend">
+        <span class="input-group-text btn btn-outline-secondary"><i class="fas fa-search"></i></span>
+      </div>
+      <ul class="list-group daftarsearch" ng-model="hidethis" ng-hide="hidethis">
+        <li class="list-group-item" ng-repeat="searchdata in filtersearch" ng-click="fillTextbox(searchdata)">{{searchdata}}</li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      
+  </div>
+      
+     
     </div>
-  </nav>
+      
+    </form>
+    <ul class="navbar-nav narbar-right ml-3">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Get your team access to Udemy’s top 2,500 courses anytime, anywhere.</p>
+          <a class="dropdown-item parlink ali" href="#">Try Trilez for Business</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Turn what you know into an opportunity and reach millions around the world.</p>
+          <a class="dropdown-item parlink ali" href="#">Learn More</a>
+        </div>
+      </li>
+
+    </ul>
+    <div class="ml-0 mr-1">
+    <button class="btn btn-warning" onclick="increaseNumber()"><span class="fas fa-cart-plus"></span><span class=" badge badge-pill badge-dark" id="cartcount"></span></button>
+    <button class="btn btn-outline-light my-2 my-sm-2" type="submit">Login</button>
+    <button class="btn btn-danger my-2 my-sm-2" type="submit">SignUp</button>
+    </div>
+  </div>
+</nav>
 
 <div class="header">
 	Checkout
@@ -81,9 +132,55 @@
 			<div>	
 					<p style="font-size: 20px;"> Your Item</p>
 			</div>	
-			<div class="garis" style="margin-top: -15px;">	
-
+			<div class="garis" style="margin-top: -15px;">
 			</div>
+
+      <div class="row mt-3 ml-2"> 
+               <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px; margin-right: 10px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                 
+                        <td class="col-sm-4 col-md-6 text-center"><strong style="margin-left: 200px;margin-top: 20px; font-size: 20px;">$14.61</strong></td>
+                     </td>   
+                    </tr>
+
+      </div>
+      <div class="row mt-3 ml-2">
+      <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px; margin-right: 10px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                 
+                        <td class="col-sm-4 col-md-6 text-center"><strong style="margin-left: 200px;margin-top: 20px; font-size: 20px;">$14.61</strong></td>
+                     </td>   
+                    </tr> 
+
+      </div> 
+      <div class=" row mt-3"> 
+      <div class="col col-md-6"> </div>
+          <div class="col col-md-2">
+                         <h3 class="pull-right">Total</h3>
+
+          </div>
+          <div class="col col-md-4"> 
+                        <h3>$29.22</h3>
+      </div>
+</div>
+
+
 		</div>
 
 
@@ -147,8 +244,31 @@
 
 
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!--footer-->
+    <div class="copy p-4 bg-light fixed-bottom">
+  <div class="container-fluid">
+    <div class="row  d-flex align-items-center justify-content-center">
+      <div class="text col-6 ">
+        <p>@2018 <a href="#">Trilez</a> &nbsp;Allrights reserved</p>
+      </div>
+      <div class="payment  col-6 clearfix">
+        <ul class="payment-list list-inline-item float-right">
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Privacy Policy and Cookie Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Intellectual Property</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--End of Navbar-->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
