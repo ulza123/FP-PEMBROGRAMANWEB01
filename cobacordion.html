@@ -1,13 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title> fdf</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head>
-<body>
-<div class="container-fluid">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
+
+
+    <title>Trilez Website</title>
+  </head>
+  <body>
+
+    <!--header-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Trilez</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+ 
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-buromobelexperte"></i> &nbsp;Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Development</a>
+          <a class="dropdown-item" href="#">Business</a>
+          <a class="dropdown-item" href="#">Office Productivity</a>
+          <a class="dropdown-item" href="#">Personal Development</a>
+          <a class="dropdown-item" href="#">Design</a>
+          <a class="dropdown-item" href="#">Marketing</a>
+          <a class="dropdown-item" href="#">LifeStyle</a>
+          <a class="dropdown-item" href="#">Photography</a>
+          <a class="dropdown-item" href="#">Health & Fitness</a>
+          <a class="dropdown-item" href="#">Teacher Training</a>
+          <a class="dropdown-item" href="#">Music</a>
+          <a class="dropdown-item" href="#">Academics</a>
+          <a class="dropdown-item" href="#">Languange</a>
+          <a class="dropdown-item" href="#">Test Prep</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0 mr-0">
+    
+    <div ng-app="myapp" ng-controller="usercontroller">
+      <div class="input-group">
+    <input name="search" id="search" ng-model="search" ng-keyup="complete(search)" class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;"><div class="input-group-prepend">
+        <span class="input-group-text btn btn-outline-secondary"><i class="fas fa-search"></i></span>
+      </div>
+      <ul class="list-group daftarsearch" ng-model="hidethis" ng-hide="hidethis">
+        <li class="list-group-item" ng-repeat="searchdata in filtersearch" ng-click="fillTextbox(searchdata)">{{searchdata}}</li>
+      </ul>
+      
+  </div>
+      
+     
+    </div>
+      
+    </form>
+    <ul class="navbar-nav narbar-right ml-3">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Get your team access to Udemy’s top 2,500 courses anytime, anywhere.</p>
+          <a class="dropdown-item parlink ali" href="#">Try Trilez for Business</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Turn what you know into an opportunity and reach millions around the world.</p>
+          <a class="dropdown-item parlink ali" href="#">Learn More</a>
+        </div>
+      </li>
+
+    </ul>
+    <div class="ml-0 mr-1">
+    <a href="keranjang.html"><button class="btn btn-warning"><span class="fas fa-cart-plus"></span><span class=" badge badge-pill badge-dark" id="cartcount"></span></button></a>
+    <button class="btn btn-outline-light my-2 my-sm-2" type="submit">Login</button>
+    <button class="btn btn-danger my-2 my-sm-2" type="submit">SignUp</button>
+    </div>
+  </div>
+</nav>
+
+<!--end navbare-->
+
+
+<div class="container">
 <div class="row">
 <div class="col-3">  
 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -27,9 +130,49 @@
 </div>
 </div>
 </div>
- <!--js--> 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+
+
+    
+
+    <!--footer-->
+    <div class="copy p-4 bg-light">
+  <div class="container-fluid">
+    <div class="row  d-flex align-items-center justify-content-center">
+      <div class="text col-6 ">
+        <p>@2018 <a href="#">Trilez</a> &nbsp;Allrights reserved</p>
+      </div>
+      <div class="payment  col-6 clearfix">
+        <ul class="payment-list list-inline-item float-right">
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Privacy Policy and Cookie Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Intellectual Property</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--End of Navbar-->
+
+
+<div class="btn btn-danger pop" data-container="body" data-toggle="popover" data-placement="right" data-content="Optional parameter: Skip if this was not requested<br>  A placement group is a logical grouping of instances within a single Availability Zone. Using placement groups enables applications to get the full-bisection bandwidth and low-latency network performance required for tightly coupled, node-to-node communication typical of HPC applications.<br>This only applies to cluster compute instances: cc2.8xlarge, cg1.4xlarge, cr1.8xlarge, hi1.4xlarge and hs1.8xlarge.<br>    More info: <a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html&quot; target=&quot;_blank&quot;>Click here...</a> <a class=&quot; btn btn-danger &quot;>Click here</a>" data-original-title="" title="Ini Adalah Popover">
+    HOVER OVER ME
+    </div>
+
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/myscript.js"></script>
+    <!--Angular-->
+    
+
+  </body>
 </html>
