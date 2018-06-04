@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
+  <title> Terms and Privacy Policy</title>
+
+</head>
+<body>'
+    <!--header-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">Trilez</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+ 
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-buromobelexperte"></i> &nbsp;Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Development</a>
+          <a class="dropdown-item" href="#">Business</a>
+          <a class="dropdown-item" href="#">Office Productivity</a>
+          <a class="dropdown-item" href="#">Personal Development</a>
+          <a class="dropdown-item" href="#">Design</a>
+          <a class="dropdown-item" href="#">Marketing</a>
+          <a class="dropdown-item" href="#">LifeStyle</a>
+          <a class="dropdown-item" href="#">Photography</a>
+          <a class="dropdown-item" href="#">Health & Fitness</a>
+          <a class="dropdown-item" href="#">Teacher Training</a>
+          <a class="dropdown-item" href="#">Music</a>
+          <a class="dropdown-item" href="#">Academics</a>
+          <a class="dropdown-item" href="#">Languange</a>
+          <a class="dropdown-item" href="#">Test Prep</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0 mr-0">
+    
+    <div ng-app="myapp" ng-controller="usercontroller">
+      <div class="input-group">
+    <input name="search" id="search" ng-model="search" ng-keyup="complete(search)" class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;"><div class="input-group-prepend">
+        <span class="input-group-text btn btn-outline-secondary"><i class="fas fa-search"></i></span>
+      </div>
+      <ul class="list-group daftarsearch" ng-model="hidethis" ng-hide="hidethis">
+        <li class="list-group-item" ng-repeat="searchdata in filtersearch" ng-click="fillTextbox(searchdata)">{{searchdata}}</li>
+      </ul>
+      
+  </div>
+      
+     
+    </div>
+      
+    </form>
+    <ul class="navbar-nav narbar-right ml-3">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="trilezstudent.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Business
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Get your team access to Udemy’s top 2,500 courses anytime, anywhere.</p>
+          <a class="dropdown-item parlink ali" href="bisnis.html">Try Trilez for Business</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Students
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <p class="parlink">Turn what you know into an opportunity and reach millions around the world.</p>
+          <a class="dropdown-item parlink ali" href="students.html">Learn More</a>
+        </div>
+      </li>
+
+    </ul>
+    <div class="ml-0 mr-1">
+    <a href="keranjang.html"><button class="btn btn-warning"><span class="fas fa-cart-plus"></span><span class=" badge badge-pill badge-dark" id="cartcount"></span></button></a>
+    <a href="login.html"><button class="btn btn-outline-light my-2 my-sm-2" type="submit">Login</button></a>
+    <a href="signup.html"><button class="btn btn-danger my-2 my-sm-2" type="submit">SignUp</button></a>
+    </div>
+  </div>
+</nav>
+
+<!--end navbare-->
+
+
+
+<div class="container-fluid" style="margin-top: 10px;">
+    <div class="row">
+  <div class="col-3">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Term of Use</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Privacy Policy adn Cookie Policy</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Intellectual Property Policy</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Credits Programs</a>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+        
+          <h5>Terms of Use</h5>
+<p style="text-align: justify;">
+These Terms of Use ("Terms") were last updated on May 15, 2018.
+
+Trilez’s mission is to improve lives through learning. We enable anyone anywhere to create and share educational courses (instructors) and to enroll in these educational courses to learn (students). We consider our marketplace model the best way to offer valuable educational content to our users. We need rules to keep our platform and services safe for you, us and our student and instructor community. These Terms apply to all your activities on the Trilez website, the Trilez mobile applications, our TV applications, our APIs and other related services (“Services”).
+
+If you publish a course on the Trilez platform, you must also agree to the Instructor Agreement. We also provide details regarding our processing of personal data of our students and instructors in our Privacy Policy. If you are using Trilez as part of your employer’s Trilez For Business learning and development program (UFB), you can consult our UFB Privacy Statement.
+
+If you live in the United States or Canada, by agreeing to these Terms, you agree to resolve disputes with Trilez through binding arbitration (with very limited exceptions, not in court), and you waive certain rights to participate in class actions, as detailed in the Dispute Resolution section. 
+        </p>
+      </div>
+
+
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+        
+         <h5>Privacy Policy</h5>
+<p style="text-align: justify;">  
+This Privacy Policy was last updated on May 15, 2018.
+
+While we have not made any material changes to the way we process data about our users, we have updated this policy to make it shorter and easier to read, and to comply with the EU General Data Protection Regulation coming into force on May 25, 2018.
+
+Thank you for joining the world’s largest online learning marketplace. We at Trilez, Inc. (“Trilez”, “we”, “us”) respect your privacy and want you to understand how we collect, use, and share data about you. This Privacy Policy covers our data collection practices and describes your rights to access, correct, or restrict our use of your personal data.
+
+Unless we link to a different policy or state otherwise, this Privacy Policy applies when you visit or use the Trilez website, mobile applications, APIs or related services (the “Services”).
+
+By using the Services, you agree to the terms of this Privacy Policy. You shouldn’t use the Services if you don’t agree with this Privacy Policy or any other agreement that governs your use of the Services. 
+        </p>
+      </div>
+
+
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+        
+          <h5>Intellectual Property Policy</h5>
+<p style="text-align: justify;">  
+This Intellectual Property Policy was last updated on November 30, 2017.
+
+Trilez is a technology platform that enables anyone anywhere to create and share educational courses. We host more than 65,000 courses on our online learning marketplace. Our marketplace model means we do not review or edit the courses for legal issues, and we are not in a position to determine the legality of course content. However, it is important to us that instructors posting courses on Trilez respect the intellectual property of others. When instructors post courses on our marketplace, they make the promise that they have the necessary authorization or rights to use all the content contained in their courses.
+
+Infringing activity is not tolerated on or through our platform.
+
+This policy addresses what we do in the event of copyright infringement reports from content owners and trademark infringement claims from trademark owners with respect to the courses on the Trilez platform. The policy also addresses what we do when Trilez instructors’ courses are copied on third-party platforms without their consent. 
+        </p>
+      </div>
+
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"> 
+            
+<h5>Trilez Credits Program Terms & Conditionsh</h5>
+<p style="text-align: justify;">
+The Trilez credits program ("Program") is offered to anyone with a Trilez account at the sole discretion of Trilez, Inc. Participation in the Program is automatic. You will earn Trilez credits ("Credits") any time you complete certain activities that are eligible for receiving Credits (each an "Eligible Activity"). For example, Trilez may designate enrolling in a certain course as an Eligible Activity; as soon as you enroll in that course you will receive the Credits allocated for that Eligible Activity. Remember, to earn the Credits the activity must be an Eligible Activity and you must complete all steps associated with the Eligible Activity. There are a few additional rules and terms that apply to the Program:
+
+    The Program is void if prohibited by law.
+    Trilez may change or terminate the Program at any time, with or without notice to you. However, any Credits earned prior to termination shall continue to be available until the expire.
+    If the Eligible Activity has conditions – such as an expiration date, or restrictions on how Credits can be used – you must comply with those conditions.
+    If you try to hack, tamper or otherwise "game" the Program, you lose all Credits and may be barred from the Program or from the Trilez site.
+    Credits are automatically applied to courses and other products and services you order through the Trilez site (subject to any restrictions). You do not have the ability to select how the Credits are applied.
+    If you receive a permitted refund for a course or product or service that was ordered using Credits, the refund will be in Credits to your account for the appropriate amount. The original expiration date for the refunded Credits will still apply.
+    Credits have no cash value and may not be traded or redeemed for cash, or assigned, sold or transferred to anyone else. However, if you purchase a course, product or service for someone else through your account your Credits will be applied to that purchase.
+    If taxes are owed on your Credits or their use or your participation in the Program, you are responsible for their calculation and payment.
+
+If you have any questions about the Program, your account, or Trilez, please contact us.
+
+
+          </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  <!--footer-->
+    <div class="copy p-4 bg-light fixed-bottom">
+  <div class="container-fluid">
+    <div class="row  d-flex align-items-center justify-content-center">
+      <div class="text col-6 ">
+        <p>@2018 <a href="index.html">Trilez</a> &nbsp;Allrights reserved</p>
+      </div>
+      <div class="payment  col-6 clearfix">
+        <ul class="payment-list list-inline-item float-right">
+          <li class="list-inline-item">
+            <a href="terms.html">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="affliate.html">Affiliate</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--End of Navbar-->
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/myscript.js"></script>
+    <!--Angular-->
+    
+
+</body>
+</html>

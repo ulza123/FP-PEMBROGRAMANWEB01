@@ -23,6 +23,20 @@
 //     $('[data-toggle="dropdown"]', _d).attr('aria-expanded',_d.is(':hover'));
 //   },300);
 // });
+//fungsi remove chart
+
+function myFunc() {
+    var x = document.getElementById("myDIV");
+    var y = document.getElementById("myDIV2");
+    if (x.style.display != "none") {
+        x.style.display = "none";
+    } else if(y.style.display != "none") {
+        y.style.display = "none";
+    }
+}
+
+
+
 //fungsi cartcount 
 var n=0;
 function increaseNumber(){

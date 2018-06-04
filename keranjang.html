@@ -20,7 +20,7 @@
   </head>
   <body>
 
-<!--header-->
+    <!--header-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.html">Trilez</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,53 +56,50 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#"></a>
-      </li>
 
     </ul>
     <form class="form-inline my-2 my-lg-0 mr-0">
     
     <div ng-app="myapp" ng-controller="usercontroller">
-        <div class="input-group">
-        <input name="search" id="search" ng-model="search" ng-keyup="complete(search)" class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;"><div class="input-group-prepend">
+      <div class="input-group">
+    <input name="search" id="search" ng-model="search" ng-keyup="complete(search)" class="form-control" type="search" placeholder="Search for Course" aria-label="Search" style="width: 500px;"><div class="input-group-prepend">
         <span class="input-group-text btn btn-outline-secondary"><i class="fas fa-search"></i></span>
       </div>
-        <ul class="list-group daftarsearch" ng-model="hidethis" ng-hide="hidethis">
-            <li class="list-group-item" ng-repeat="searchdata in filtersearch" ng-click="fillTextbox(searchdata)">{{searchdata}}</li>
-        </ul>
+      <ul class="list-group daftarsearch" ng-model="hidethis" ng-hide="hidethis">
+        <li class="list-group-item" ng-repeat="searchdata in filtersearch" ng-click="fillTextbox(searchdata)">{{searchdata}}</li>
+      </ul>
       
-    </div>
-        
+  </div>
+      
      
     </div>
       
     </form>
     <ul class="navbar-nav narbar-right ml-3">
       <li class="nav-item dropdown">
-        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" href="trilezstudent.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Trilez for Business
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <p class="parlink">Get your team access to Udemy’s top 2,500 courses anytime, anywhere.</p>
-          <a class="dropdown-item parlink ali" href="#">Try Trilez for Business</a>
+          <a class="dropdown-item parlink ali" href="bisnis.html">Try Trilez for Business</a>
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link " href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Trilez for Business
+        <a class="nav-link " href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trilez for Students
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <p class="parlink">Turn what you know into an opportunity and reach millions around the world.</p>
-          <a class="dropdown-item parlink ali" href="#">Learn More</a>
+          <a class="dropdown-item parlink ali" href="students.html">Learn More</a>
         </div>
       </li>
 
     </ul>
     <div class="ml-0 mr-1">
     <a href="keranjang.html"><button class="btn btn-warning"><span class="fas fa-cart-plus"></span><span class=" badge badge-pill badge-dark" id="cartcount"></span></button></a>
-    <button class="btn btn-outline-light my-2 my-sm-2" type="submit">Login</button>
-    <button class="btn btn-danger my-2 my-sm-2" type="submit">SignUp</button>
+    <a href="login.html"><button class="btn btn-outline-light my-2 my-sm-2" type="submit">Login</button></a>
+    <a href="signup.html"><button class="btn btn-danger my-2 my-sm-2" type="submit">SignUp</button></a>
     </div>
   </div>
 </nav>
@@ -196,9 +193,10 @@
                             <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
                         </button></td>
                         <td>
+                        <a href="checkout.html">
                         <button type="button" class="btn btn-success">
                             Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
+                        </button></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -209,30 +207,30 @@
 
 		
 
-		<!--footer-->
-		<div class="copy p-4 bg-light">
-	<div class="container-fluid">
-		<div class="row  d-flex align-items-center justify-content-center">
-			<div class="text col-6 ">
-				<p>@2018 <a href="#">Trilez</a> &nbsp;Allrights reserved</p>
-			</div>
-			<div class="payment  col-6 clearfix">
-				<ul class="payment-list list-inline-item float-right">
-					<li class="list-inline-item">
-						<a href="#">Terms</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="#">Privacy Policy and Cookie Policy</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="#">Intellectual Property</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<!--footer-->
+    <div class="copy p-4 bg-light fixed-bottom">
+  <div class="container-fluid">
+    <div class="row  d-flex align-items-center justify-content-center">
+      <div class="text col-6 ">
+        <p>@2018 <a href="index.html">Trilez</a> &nbsp;Allrights reserved</p>
+      </div>
+      <div class="payment  col-6 clearfix">
+        <ul class="payment-list list-inline-item float-right">
+          <li class="list-inline-item">
+            <a href="terms.html">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="affliate.html">Affiliate</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
-		<!--End of Navbar-->
+    <!--End of Navbar-->
 
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
